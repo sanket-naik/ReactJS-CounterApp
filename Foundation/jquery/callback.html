@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script src='jquery.min.js'></script>
+</head>
+
+<body>
+
+    <button id="btntoggle">Toggle</button>
+
+    <div class="div1">
+        <p>Hello world 1... div1</p>
+    </div>
+
+    <div class="div2">
+        <p class='p1'>Hello world 2... div2</p>
+    </div>
+
+</body>
+
+</html>
+
+<script>
+    $(document).ready(() => { //document.ready will start process only when whole page element is loaded
+
+        $('#btntoggle').click(() => {
+            $('.div1').fadeToggle(3000, () => {
+                alert("Division is faded")
+            })
+        })
+        //chaining effects: $(#div1).slideUp(2000).slideDown(2000). etc
+        $('.div2').click(() => {
+
+            var a = $('.div1').text()
+            $('.p1').html('<h1>' + a + '</h1>')
+            //    $('.p1').css('color','red')
+        })
+        /* 
+                   p1.text()
+                   html()
+                   .attr('class')
+                     -to set a value .attr('class', div1) second param sets new value
+                   css('color') //get property of the element
+                     -color, font-family
+                     - to set .css('color','red')
+                 */
+    })
+</script>
+
+<style>
+    .div1 {
+        margin: 20px;
+        border: 1px solid red;
+    }
+
+    .div2 {
+        margin: 20px;
+        border: 1px solid green;
+    }
+</style>

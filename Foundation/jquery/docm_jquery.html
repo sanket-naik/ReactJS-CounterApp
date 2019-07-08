@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script src='jquery.min.js'></script>
+</head>
+
+<body>
+
+    <button id="btntoggle">Toggle</button>
+    <button id="addcss">Add css class</button>
+
+    <div class="div1">
+        <p>Hello world 1... div1</p>
+    </div>
+
+    <div class="div2">
+        <p>Hello world 2... div2</p>
+    </div>
+
+    <div class="div3">
+        <p>Hello world 3... div3</p>
+    </div>
+
+</body>
+
+</html>
+
+<!-- 
+    $('div').append("<p>asdfds</P")
+
+    append()=inserts contend at the end od the section
+    prepand()=insert content at the begining of the selected element
+    after()= inserts content after selected element
+    before()= inserts element before selected element
+
+    remove()= removes the selected element with child
+    empty()removes the clild element from selected element 
+
+    addClass() adding css style ex: $('.div1').addClass('cssclassnamehere')
+    removeClass()
+    toggleClass() toggle between add n remove
+ -->
+
+<script>
+    $(document).ready(() => { //document.ready will start process only when whole page element is loaded
+
+        $('#btntoggle').click(() => {
+            $('.div1').append("<p>This is appended para</p>")
+            $('.div2').after("<p>This is appended para</p>")
+        })
+
+        $('#addcss').click(() => {
+            $('.div3').toggleClass("new_div")
+        })
+    })
+</script>
+
+<style>
+    .div1 {
+        margin: 20px;
+        border: 1px solid red;
+    }
+
+    .div2 {
+        margin: 20px;
+        border: 1px solid green;
+    }
+
+    .new_div {
+        color: green;
+        border: 1px solid green;
+    }
+</style>

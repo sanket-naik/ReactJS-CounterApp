@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page Title</title>
+</head>
+<body>
+    <div>
+        <!-- Login form -->
+        <!-- <input type="text" required id="username" placeholder="enter">
+        <br>
+        <input type="password" required id="password" placeholder="enter">
+        <br> -->
+
+        <!-- Radio button -->
+        <!-- <input id="rd1" type="radio" name='grp1' value="val1">val1</input>
+        <input id='rd2' type="radio" name='grp1' value="val2">val2</input> -->
+
+        <!-- Select button dropdown -->
+        <!-- <select id='selectbox'>
+            <option value="Option 1">Opt1</option>
+            <option value="Option 2">Opt2</option>
+            <option value="Option 3">Opt3</option>
+        </select> -->
+
+        <!-- Getting element by tag name -->
+        <!-- <p>This is paragraph</p>
+        <p>This is paragraph</p>
+        <p>This is paragraph</p>
+        <p>This is paragraph</p> -->
+
+        <!-- Changing image on mouseover  -->
+        <!-- <img id="img" src='img1.jpg' width="200px" onmouseover="new_image()" onmouseout="old_image()"/> -->
+
+        <button id='btn1'>Click me!!!</button>
+    </div>
+</body>
+</html>
+
+<script type="text/javascript">
+
+// mouseover event
+// function new_image(){
+//     document.getElementById('img').src='img2.jpg'
+// }
+// function old_image(){
+//     document.getElementById('img').src='img1.jpg'
+// }
+
+
+document.getElementById('btn1').addEventListener('click',do_stuff);
+
+function do_stuff(){
+
+    // Geting element by tag name
+    //var paratag=document.getElementsByTagName("p")
+    // paratag[0].style.color="red"
+    // paratag[1].style.fontSize="xx-large"
+    // paratag[2].style.fontWeight="bold"
+    // paratag[3].style.fontStyle="italic"
+
+    // for(var i=0; i<paratag.length; i++){
+    //     paratag[i].style.color="green"
+    // }
+
+
+
+    // Select button dropdown
+    // var select=document.getElementById('selectbox')
+    // alert(select.value)
+    // alert(select.options[select.selectedIndex].value)
+
+    //Radio button working
+
+    // let rd1=document.getElementById('rd1')
+    // let rd2=document.getElementById('rd2')
+
+    // if(rd1.checked==true){
+    //     alert('rd1 clicked')
+    // }
+    // else if(rd2.checked==true){
+    //     alert('rd2 clicked')
+    // }
+    // else{
+    //     alert("noting is selscted")
+    // }
+
+    //username and password
+
+    // var username=document.getElementById('username').value;
+    // var password=document.getElementById('password').value;
+    // if(username=="admin" && password=="admin"){
+    //     alert("Success... Welcome")
+    // }
+    // else{
+    //     alert("Wrong password")
+    // }
+    // console.log(str)
+}
+
+// document.getElementById('click').addEventListener('click',buttonClick)
+// var title=document.getElementById('div1').innerText
+// alert(title)
+// function buttonClick(){
+//     alert("hello")
+// }
+
+//constructor function used to store multiple objects
+//     function Student(name, age, usn){
+//         this.name=name,
+//         this.age=function(){
+//             document.write(age)
+//         },
+//         this.usn=usn
+//     }
+
+// var std1=new Student("sanket",24,001)
+// var std2=new Student("abhin",23, 002)
+// document.getElementById('div1').innerText=std1.age()
+// document.write(typeof(std1 ))
+</script>

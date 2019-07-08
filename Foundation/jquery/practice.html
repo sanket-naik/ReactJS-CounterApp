@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='jquery.min.js'></script>
+</head>
+<body>
+
+    
+    <button id="click">single & double click</button>
+    <button id="evn">hover</button>
+    <button id="hide">hide div1</button>
+    <button id="slide">slide div3</button>
+    <button id="move">Move cube</button>
+
+    <div class="div1">
+        <p>Hello world 1... div1</p>
+    </div>
+    <div class="div2">
+        <p>Hello world 2... div2</p>
+    </div>
+    <div class="div3">
+            <p>Hello world 3... div3</p>
+    </div>
+
+    <div class="anim">
+        <p>Hello</p>
+    </div>
+
+
+</body>
+</html>
+
+<script>
+
+    /*
+        -click
+        -dblclick   //double click
+        -mouseenter   //onmouseover
+        -mouseleave  //onmouseout
+        -hover  //takes 2 args enter and leave
+    */
+
+    /*
+        -show/hide/toggle // hide n show toggle does both
+        -slideUp/slideDown/slideToggle
+    */
+
+    $(document).ready(()=>{     //document.ready will start process only when whole page element is loaded
+        $('#click').dblclick(fade1);
+        $('#click').click(fade2);
+
+        function fade1() {
+            $('.div1,.div2').fadeToggle(1000);
+        }
+        function fade2() {
+            $('.div1').fadeToggle(1000);
+        }
+
+        $('#evn').hover(fade1, fade2)
+
+        $('#hide').click(()=>{  //.show() will show the hidden div //.toggle will hide/show depending on situation
+            $('.div1').hide()
+        })
+
+        $('#slide').click(()=>{
+            $('.div3').slideToggle()
+        })
+
+        $('#move').click(()=>{
+            $('.anim').animate({
+                left:'150px'
+            }, 1000)
+        })
+    })
+
+  
+
+</script>
